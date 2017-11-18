@@ -5,7 +5,7 @@
 
 # Credits
 * Game and code: [Amélia Chavot](http://www.mysteriousfox.com "http://www.mysteriousfox.com") 
-* * Free of use art: [Kenney](http://kenney.nl "http://kenney.nl") 
+* Free of use art: [Kenney](http://kenney.nl "http://kenney.nl") 
 
 # Builds
 | Windows Build  | Linux Build |
