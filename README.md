@@ -15,5 +15,5 @@
 ---
 # Links
 * My website: [www.mysteriousfox.com](http://www.mysteriousfox.com)  =)  
-
+* Itch.io page: [https://artemisia-absinthium.itch.io](https://artemisia-absinthium.itch.io)
 
