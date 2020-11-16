@@ -81,7 +81,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # Visual Studio COde
-.vs/
+.vs/*
 .vscode/*
 !.vscode/settings.json
 !.vscode/tasks.json
