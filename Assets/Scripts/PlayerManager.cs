@@ -42,7 +42,7 @@ public class PlayerManager : MonoBehaviour
             {
                 foreach (Transform child in player.transform)
                 {
-                    if (child.tag == "Player")
+                    if (child.tag == "Player" && child.gameObject.activeInHierarchy)
                     {
                         child.GetComponent<SpriteRenderer>().enabled = false;
                     }
@@ -77,7 +77,7 @@ public class PlayerManager : MonoBehaviour
                     blikingDeltaTime = 0.0f;
                     foreach (Transform child in player.transform)
                     {
-                        if (child.tag == "Player")
+                        if (child.tag == "Player" && child.gameObject.activeInHierarchy)
                         {
                             if(child.GetComponent<SpriteRenderer>().enabled)
                             {
@@ -96,7 +96,7 @@ public class PlayerManager : MonoBehaviour
                     blikingDeltaTime = 0.0f;
                     foreach (Transform child in player.transform)
                     {
-                        if (child.tag == "Player")
+                        if (child.tag == "Player" && child.gameObject.activeInHierarchy)
                         {
                             child.GetComponent<SpriteRenderer>().enabled = true;
                         }
@@ -112,7 +112,7 @@ public class PlayerManager : MonoBehaviour
         {
             foreach (Transform child in player.transform)
             {
-                if (child.tag == "Player")
+                if (child.tag == "Player" && child.gameObject.activeInHierarchy)
                 {
                     child.GetComponent<Animator>().Play("Jumping");
                 }
@@ -139,7 +139,7 @@ public class PlayerManager : MonoBehaviour
         {
             foreach (Transform child in player.transform)
             {
-                if (child.tag == "Player")
+                if (child.tag == "Player" && child.gameObject.activeInHierarchy)
                 {
                     child.GetComponent<Animator>().Play("Running");
                 }
@@ -180,7 +180,7 @@ public class PlayerManager : MonoBehaviour
         isDead = true;
         foreach (Transform child in player.transform)
         {
-            if (child.tag == "Player")
+            if (child.tag == "Player" && child.gameObject.activeInHierarchy)
             {
                 child.GetComponent<Animator>().Play("Dying");
             }
@@ -196,7 +196,7 @@ public class PlayerManager : MonoBehaviour
     {
         foreach (Transform child in player.transform)
         {
-            if (child.tag == "Player")
+            if (child.tag == "Player" && child.gameObject.activeInHierarchy)
             {
                 child.GetComponent<SpriteRenderer>().enabled = true;
             }
