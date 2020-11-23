@@ -19,7 +19,7 @@ public class BackgroundManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update () {
-        if (isPlaying)
+        if (isPlaying && Input.GetKey(KeyCode.D))
         {
             moveBackground(background1);
             moveBackground(background2);

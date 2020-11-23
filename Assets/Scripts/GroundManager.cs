@@ -36,7 +36,7 @@ public class GroundManager : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        if (isPlaying)
+        if (isPlaying && Input.GetKey(KeyCode.D))
         {
             moveGround(ground1);
             moveGround(ground2);

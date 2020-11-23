@@ -28,7 +28,7 @@ public class SnailScript : MonoBehaviour {
         {
             if (coll.tag == "PlayerFeet")
             {
-                if (!gameMG.GetComponent<PlayerManager>().isInvincible)
+                //if (!gameMG.GetComponent<PlayerManager>().isInvincible)
                 {
                     //
                     // change animation

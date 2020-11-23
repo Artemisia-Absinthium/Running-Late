@@ -26,6 +26,11 @@ public class KeyScript : MonoBehaviour {
                     this.transform.position,
                     Quaternion.identity);
                 obj.transform.parent = this.transform.parent;
+
+                if (KeyColor == 2)
+                {
+                    obj.GetComponent<CoinScript>().ForceGood();
+                }
             }
 
             Destroy(this.gameObject);

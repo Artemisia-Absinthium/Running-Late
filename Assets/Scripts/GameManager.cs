@@ -21,6 +21,7 @@ public class GameManager : MonoBehaviour
     public GameObject[] spawnPrefab;
     public GameObject[] keyUI;
     public GameObject[] keyUIFull;
+    public ShakeBehavior cameraShake;
 
     public AudioClip jumpSound;
     public AudioClip coinSound;
@@ -29,6 +30,7 @@ public class GameManager : MonoBehaviour
     public AudioClip hurtSound;
     public AudioClip buttonSound;
     public AudioClip deadSound;
+
     private AudioSource jumpSource;
     private AudioSource coinSource;
     private AudioSource keySource;
@@ -113,12 +115,13 @@ public class GameManager : MonoBehaviour
         if (keyStatue >= 4)
         {
             butonSecret.gameObject.SetActive(true);
+            scoreMG.AddScore(500);
         }
-        if (isPlaying)
+        if (isPlaying && Input.GetKey(KeyCode.D))
         {
             if (Input.GetMouseButtonDown(1))
             {
-                BackToMenu();
+                //BackToMenu();
             }
 
             foreach (Transform child in transform)
@@ -281,6 +284,8 @@ public class GameManager : MonoBehaviour
             isPlaying = false;
             groundMG.GetComponent<GroundManager>().isPlaying = false;
             backgroundMG.GetComponent<BackgroundManager>().isPlaying = false;
+            butonSecret.gameObject.SetActive(true);
+
             foreach (Transform child in transform)
             {
                 Destroy(child.transform.gameObject);
@@ -290,6 +295,8 @@ public class GameManager : MonoBehaviour
         {
             playerMG.GetTouch();
         }
+
+        cameraShake.TriggerShake();
     }
 
     internal void AddKey(int keyColor)
